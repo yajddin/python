@@ -6,4 +6,4 @@ def twoSum(nums,target):
 				return [i,j]
 	return []
 
-print(twoSum([2,7,11,15],20))
+print(twoSum([2,7,11,15],26))
