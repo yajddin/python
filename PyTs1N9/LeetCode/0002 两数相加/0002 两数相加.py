@@ -7,12 +7,7 @@ class ListNode:
         self.next = next
 ####################################################
 class Solution:
-
-    def addTwoNumbers(
-        self,
-        l1: Optional[ListNode],
-        l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+    def addTwoNumbers(self,l1: Optional[ListNode],l2: Optional[ListNode]) -> Optional[ListNode]:
 
         dummy = ListNode(0)
         cur = dummy
@@ -25,7 +20,6 @@ class Solution:
             total = x + y + carry
             carry = total // 10
             cur.next = ListNode(total % 10)
-
             cur = cur.next
 
             if l1:
