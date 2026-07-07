@@ -1,14 +1,15 @@
-def addTwoNumbers(l1,l2):
-	num1 = int(''.join(map(str, l1[::-1])))
-	num2 = int(''.join(map(str, l2[::-1])))
-	num = num1 + num2
-	return [int(i) for i in str(num)][::-1]
+# 列表思维 👇👇👇
+# def addTwoNumbers(l1,l2):
+# 	num1 = int(''.join(map(str, l1[::-1])))
+# 	num2 = int(''.join(map(str, l2[::-1])))
+# 	num = num1 + num2
+# 	return [int(i) for i in str(num)][::-1]
+#
+# l1 = [2,4,3]
+# l2 = [5,6,4]
+# print(addTwoNumbers(l1,l2))
 
-l1 = [9,9,9,9,9,9,9]
-l2 = [9,9,9,9]
-print(addTwoNumbers(l1,l2))
-
-# 石山代码 👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+# 石山代码 👇👇👇
 # str_num1 = []
 # str_num2 = []
 # for i in range(arr1_len, 0, -1):
