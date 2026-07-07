@@ -8,25 +8,18 @@ class ListNode:
 ####################################################
 class Solution:
     def addTwoNumbers(self,l1: Optional[ListNode],l2: Optional[ListNode]) -> Optional[ListNode]:
-
         dummy = ListNode(0)
         cur = dummy
         carry = 0
-
         while l1 or l2 or carry:
             x = l1.val if l1 else 0
             y = l2.val if l2 else 0
-
             total = x + y + carry
             carry = total // 10
             cur.next = ListNode(total % 10)
             cur = cur.next
-
-            if l1:
-                l1 = l1.next
-            if l2:
-                l2 = l2.next
-
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
         return dummy.next
 
 # 列表思维 👇👇👇链表不支持下标或切片
