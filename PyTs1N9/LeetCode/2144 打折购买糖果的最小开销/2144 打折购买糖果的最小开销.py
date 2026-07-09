@@ -5,13 +5,12 @@ def minimumCost(cost) -> int:
 	length = len(cost)
 
 	for i in range(length):
-		if i >= 2 and (i - 2) % 3 == 0:
-			cost[i] = 0
-		sums += cost[i]
+		if i % 3 != 2:
+			sums += cost[i]
 
 	return sums
 
-print(minimumCost([6,5,7,9,2,2]))
+print(minimumCost([6, 5, 7, 9, 2, 2]))
 
 # for _ in range(2, length, 3):
 # 	print(_)
