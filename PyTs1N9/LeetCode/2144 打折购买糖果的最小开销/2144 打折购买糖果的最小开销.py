@@ -1,12 +1,12 @@
-arr = [4,2,3,1]
-arr.sort()
-arr.reverse()
+cost = [6, 5, 7, 9, 2, 2]
+cost.sort()
+cost.reverse()
 sums = 0
-length = len(arr)
+length = len(cost)
 
 for _ in range(2, length, 3):
 	print(_)
-	print(arr[_])
-	arr[_] = 0
+	print(cost[_])
+	cost[_] = 0
 for _ in range(length):
-	sums += arr[_]
+	sums += cost[_]
