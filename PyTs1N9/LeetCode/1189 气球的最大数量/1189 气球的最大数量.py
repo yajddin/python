@@ -11,5 +11,11 @@ def maxNumberOfBalloons_01(text):
 		count.get('n',0),
 	)
 
+# 思路2： 利用python set()集合，通过集合元素唯一性进行统计
+def maxNumberOfBalloons_02(text):
+	target = "balloon"
+	return min(text.count(c) // target.count(c) for c in set(target))
+
 if __name__ == '__main__':
     print(maxNumberOfBalloons_01("loonbalxballpoon"))
+    print(maxNumberOfBalloons_02("nlaebolko"))
