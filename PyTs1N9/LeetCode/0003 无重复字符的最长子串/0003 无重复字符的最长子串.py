@@ -14,16 +14,16 @@ def lengthOfLongestSubstring_1(s):
 def lengthOfLongestSubstring_2(s):
 	start = -1
 	d = {}
-	max = 0
+	max_len = 0
 	for i in range(len(s)):
 		if s[i] in d and d[s[i]] > start:
 			start = d[s[i]]
 			d[s[i]] = i
 		else:
 			d[s[i]] = i
-			if i - start > max:
-				max = i - start
-	return max
+			if i - start > max_len:
+				max_len = i - start
+	return max_len
 
 # 如果字符串不包含中文(只有ASCII字符)，可以用固定数组代替字段，空间O(1)
 # 最快版本 时间O(n) 空间O(1)
